@@ -61,8 +61,8 @@ Weaver supports two active specs. Set your spec once and the rotation adapts aut
 1. **Aimed Shot** — when Lock and Load is active (with configurable clipping allowance)
 2. **Steady + Arcane combo** — when Enchanted Ammo is active, mana above threshold, and wont clip.
 3. **Arcane Shot** — when Enchanted Ammo is active.
-4. **Steady Shot** — filler with zero clipping allowed.
-5. **Steady + Multi combo** — when enabled, mana above threshold, and wont clip.
+4. **Steady + Multi combo** — when enabled, mana above threshold, and wont clip.
+5. **Steady Shot** — filler with zero clipping allowed.
 6. **During Movement** — Arcane Shot, or Concussive Shot if Arcane is on cooldown.
 
 ### Beast Master (BM)
