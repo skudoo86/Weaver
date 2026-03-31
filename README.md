@@ -12,11 +12,11 @@ Weaver also acts as a swing timer bridge, exposing `st_timerRange` and `st_timer
 
 ADDONS:
 - [Quiver](https://github.com/) — provides the swing timer data Weaver reads from
-- [SuperCleveRoidMacros] (https://github.com/jrc13245/SuperCleveRoidMacros) — for `[norangedclip]` macro conditionals
+- [SuperCleveRoidMacros](https://github.com/jrc13245/SuperCleveRoidMacros) — for `[norangedclip]` macro conditionals
   
 MODS:
 - [Nampower](https://gitea.com/avitasia/nampower.git) — required for spell queuing and the extended `UnitMana` API 
-- [UnitXP_SP3] (https://codeberg.org/konaka/UnitXP_SP3/releases) - required for functionality of some features
+- [UnitXP_SP3](https://codeberg.org/konaka/UnitXP_SP3/releases) - required for functionality of some features
   
 > **Note:** Remove or disable SP_SwingTimer if you have it installed. It conflicts with Weaver's SCRM bridge.
 
