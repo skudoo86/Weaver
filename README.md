@@ -59,7 +59,7 @@ Weaver supports two active specs. Set your spec once and the rotation adapts aut
 ### Marksman (MM)
 
 1. **Aimed Shot** — when Lock and Load is active (with configurable clipping allowance)
-2. **Steady + Arcane combo** — when Enchanted Ammo is active, mana above threshold, and within allowable clip.
+2. **Steady + Arcane combo** — when enabled, Enchanted Ammo is active, mana above threshold, and within allowable clip.
 3. **Arcane Shot** — when Enchanted Ammo is active.
 4. **Steady + Multi combo** — when enabled, mana above threshold, and within allowable clip.
 5. **Steady Shot** — filler with zero clipping allowed.
@@ -68,8 +68,8 @@ Weaver supports two active specs. Set your spec once and the rotation adapts aut
 ### Beast Master (BM)
 
 1. **Kill Command** — attempted on every press (off-GCD, fires when available after a crit)
-2. **Steady + Arcane combo** — mana above threshold, and within allowable clip.
-3. **Steady + Multi combo** — mana above threshold, and within allowable clip.
+2. **Steady + Arcane combo** — when enabled, mana above threshold, and within allowable clip.
+3. **Steady + Multi combo** — when enabled, mana above threshold, and within allowable clip.
 4. **Steady Shot** — filler with zero clipping allowed.
 6. **During Movement** — Arcane Shot, or Concussive Shot if Arcane is on cooldown
 
