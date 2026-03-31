@@ -48,8 +48,8 @@ Weaver supports two active specs. Set your spec once and the rotation adapts aut
 
 | Command | Spec | Rotation |
 |---|---|---|
-| `/weaver spec mm` | Marksman | Full MM rotation — Aimed Shot on L&L, Steady+Arcane/Multi combos, Arcane on Enchanted Ammo, Steady filler |
-| `/weaver spec bm` | Beast Master | Kill Command on every press, Steady+Arcane/Multi combos (no ammo check), Steady filler |
+| `/weaver spec mm` | Marksman | Full MM rotation — Aimed Shot on L&L, Arcane during Enchanted Ammo debuff, Steady filler, Steady+Arcane/Multi combos when enabled.
+| `/weaver spec bm` | Beast Master | Kill Command on every press, Steady filler, Steady+Arcane/Multi combos when enabled.
 | `/weaver spec sv` | Survival | Disabled — not supported in this version |
 
 ---
@@ -58,21 +58,20 @@ Weaver supports two active specs. Set your spec once and the rotation adapts aut
 
 ### Marksman (MM)
 
-1. **Aimed Shot** — when Lock and Load is active (with configurable clip allowance)
-2. **Steady + Arcane combo** — when Enchanted Ammo is active, mana above threshold, and window fits
-3. **Steady + Multi combo** — when no ammo buff is active, mana above threshold, and window fits
-4. **Arcane Shot** — when Enchanted Ammo is active (instant, no clip check)
-5. **Steady Shot** — filler with zero clip tolerance
-6. **Movement** — Arcane Shot, or Concussive Shot if Arcane is on cooldown
+1. **Aimed Shot** — when Lock and Load is active (with configurable clipping allowance)
+2. **Steady + Arcane combo** — when Enchanted Ammo is active, mana above threshold, and wont clip.
+3. **Arcane Shot** — when Enchanted Ammo is active.
+4. **Steady Shot** — filler with zero clipping allowed.
+5. **Steady + Multi combo** — when enabled, mana above threshold, and wont clip.
+6. **During Movement** — Arcane Shot, or Concussive Shot if Arcane is on cooldown.
 
 ### Beast Master (BM)
 
 1. **Kill Command** — attempted on every press (off-GCD, fires when available after a crit)
-2. **Steady + Arcane combo** — mana above threshold, window fits (no ammo check)
-3. **Steady + Multi combo** — mana above threshold, window fits
-4. **Arcane Shot** — instant filler
-5. **Steady Shot** — filler with zero clip tolerance
-6. **Movement** — Arcane Shot, or Concussive Shot if Arcane is on cooldown
+2. **Steady + Arcane combo** — mana above threshold, wont clip.
+3. **Steady + Multi combo** — mana above threshold, wont clip.
+4. **Steady Shot** — filler with zero clipping allowed.
+6. **During Movement** — Arcane Shot, or Concussive Shot if Arcane is on cooldown
 
 ---
 
@@ -81,11 +80,11 @@ Weaver supports two active specs. Set your spec once and the rotation adapts aut
 ```
 /weaver                         Show current status
 /weaver help                    Show this command list
-/weaver cast                    Fire the rotation (use in macro)
-/weaver spec <mm|bm|sv>         Set your spec
+/weaver cast                    Fire the rotation (use as a hotkey'd macro)
+/weaver spec <mm|bm|sv>         Set your talented spec
 /weaver aimed toggle            Toggle Aimed Shot clipping on/off
-/weaver aimed time 0.35         Set max Aimed clip window (0.10–0.45s, steps of 0.05)
-/weaver combos <off|as|ms|both> Set combo mode (off / Steady+Arcane / Steady+Multi / both)
+/weaver aimed time 0.35         Set max Aimed clip window (0.10–0.45s, rounds to nearest 0.05)
+/weaver combos <off|as|ms|both> Set combo mode (off / Steady+Arcane / Steady+Multi / Both)
 /weaver mana <0-70>             Set mana % threshold for combos (rounds to nearest 10)
 /weaver chat <off|combo|clip|all> Control chat notifications
 ```
@@ -103,14 +102,14 @@ Weaver supports two active specs. Set your spec once and the rotation adapts aut
 
 ### Clip Allowances
 
-Weaver uses these hardcoded clip allowances based on damage math:
+Weaver uses these hardcoded clipping timing based on extensive testing & calculations:
 
 | Shot | Allowance |
 |---|---|
 | Aimed Shot (L&L) | Configurable, default 0.35s |
-| Steady + Arcane combo | 0.35s |
-| Steady + Multi combo | 0.25s |
-| Steady filler | 0.00s |
+| Steady + Arcane combo | Locked @ 0.35s |
+| Steady + Multi combo | Locked @ 0.25s |
+| Steady filler | Locked @ 0.00s |
 
 ---
 
@@ -132,7 +131,7 @@ The mana threshold controls when Weaver stops attempting combos. Set it based on
 |---|---|
 | `off` | Nothing (default) |
 | `combo` | Confirmed combo shots (e.g. `COMBO! (Steady>Arcane)`) |
-| `clip` | Auto shot clips with amount clipped |
+| `clip` | Auto shot clips with time lost |
 | `all` | Both combos and clips |
 
 ---
